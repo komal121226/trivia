@@ -1,0 +1,13 @@
+.navbar-default{
+  border-bottom: 5px;
+  border-style: solid;
+  border-color: #fbd34e;
+}
+
+.navbar-nav{
+  float:right;
+}
+
+.navbar-brand{
+  padding:2px;
+}

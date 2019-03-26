@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="text-info">Trivia Game</h2>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <ul class="unstyled">
+          <li ng-repeat="question in $ctrl.results">
+            <div class="row text-capitalize">
+              <div class="col-sm-4 col-xs-12">
+                <label class="text-warning"><strong>CATEGORY : </strong></label>
+                <span class="text-muted"><strong>{{ question.category}}</strong></span>
+              </div>
+              <div class="col-sm-4 col-xs-12 text-center">
+                <label class="text-warning"><strong>TYPE : </strong></label>
+                <span class="text-muted"><strong>{{ question.type}}</strong></span>
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <label class="text-warning"><strong>DIFFICULTY : </strong></label>
+                <span class="text-muted"><i class="fa fa-circle" ng-class="{'text-success': question.difficulty== 'easy','text-warning': question.difficulty== 'medium','text-danger': question.difficulty== 'hard'}"></i><strong> {{ question.difficulty}}</strong></span>
+              </div>
+            </div>
+            <div class="row text-capitalize">
+              <div class="col-sm-12 mb-2">
+                <strong class="text-info">{{ question.question }}</strong>
+                <ul class="unstyled" id="quest_{{$parent.$index}}" class="mb-2">
+                  <li ng-repeat="answer in question.answers">
+                    <div class="col-sm-6 col-xs-12">
+                      <label class="isCorrect_{{answer.selected}}" for="quest_{{$parent.$index}}_answer_{{$index}}">
+                        <input type="radio" id="quest_{{$parent.$index}}_answer_{{$index}}"
+                        ng-model="$ctrl.answers[$parent.$index]" value="{{ answer.answerText }}"  name="quest_{{$parent.$index}}_answers" />  {{ answer.answerText }}
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="panel-footer text-center">
+      <button class="btn btn-primary" type="submit" ng-click="$ctrl.showResult()">Submit</button>
+      <h5>you got {{ $ctrl.correctCount }} out of {{ $ctrl.results.length}} right</h5>
+    </div>
+  </div>
+</div>

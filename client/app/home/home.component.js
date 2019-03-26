@@ -1,8 +1,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import routing from './main.routes';
+import routing from './home.routes';
 
-export class MainController {
+export class HomeController {
   $http;
   socket;
   awesomeThings = [];
@@ -59,10 +59,10 @@ export class MainController {
   }
 }
 
-export default angular.module('apphazzApp.main', [uiRouter])
+export default angular.module('apphazzApp.home', [uiRouter])
   .config(routing)
-  .component('main', {
-    template: require('./main.html'),
-    controller: MainController
+  .component('home', {
+    template: require('./home.html'),
+    controller: HomeController
   })
   .name;

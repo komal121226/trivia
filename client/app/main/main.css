@@ -1,3 +1,21 @@
+/* quiz css starts */
+.isCorrect_true{
+  color: green;
+}
+
+.isCorrect_false{
+  color: red;
+}
+
+.unstyled{
+  list-style-type: none;
+}
+
+.mb-2{
+  margin-bottom: 20px;
+}
+/* quiz css ends */
+
 .thing-form {
   margin: 20px 0;
 }
@@ -19,9 +37,91 @@
   color: #F5F5F5;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  background: #4393B9;
+  background-image: url(../../assets/images/bg.png);
+  background-repeat: repeat;
 }
 
 .navbar-text {
   margin-left: 15px;
+}
+
+/*Fonts family start*/
+.raleway {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-style: normal;
+}
+.didactgothic {
+    font-family: 'Didact Gothic';
+    font-weight: 400;
+    font-style: normal;
+}
+.opensans {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+}
+.nunitosans {
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    font-style: normal;
+}
+.muli {
+    font-family: 'Muli';
+    font-weight: 400;
+    font-style: normal;
+}
+.hindvadodar {
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-style: normal;
+}
+.montserrat {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+}
+.montserratbold {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-style: normal;
+}
+.montserratEL {
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-style: normal;
+}
+.hindvadodara {
+  font-family: 'Hind Vadodara';
+  font-style: normal;
+  font-weight: 400;
+}
+/* fonts family end */
+
+.h-500{
+  height:395px;
+}
+
+.services{
+  font-size: 80px;
+  color:#fbd34e;
+}
+
+.servicesbg{
+  background-color: #fbd34e;
+}
+
+.carousel-caption{
+  position: unset;
+  width:100%;
+}
+
+.carousel-control{
+  background-image: none !important;
+}
+
+.panel-default{
+  border-top:5px;
+  border-top-color:#fbd34e;
+  border-style: solid;
 }
